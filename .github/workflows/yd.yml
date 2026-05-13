@@ -24,6 +24,7 @@ on:
           - 1080
           - 720
           - 480
+          - 240
           - audio
       password:
         description: '🔒 رمز ( اختیاری برای محافظت )'
@@ -193,6 +194,9 @@ jobs:
               ;;
             "360")
               FORMAT="bestvideo[height<=360]+bestaudio/bestvideo[height<=360]*+bestaudio*/bestvideo+bestaudio/best"
+              ;;
+            "240")
+              FORMAT="bestvideo[height<=240]+bestaudio/bestvideo[height<=240]*+bestaudio*/bestvideo+bestaudio/best"
               ;;
             *)
               FORMAT="bestvideo+bestaudio/bestvideo*+bestaudio*/best"
